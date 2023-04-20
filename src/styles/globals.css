@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@100;300;400;700&display=swap");
 
 * {
   margin: 0;
@@ -47,7 +48,7 @@ body {
   color: #252525;
   font-family: "Roboto", sans-serif;
 
-  max-width: 1800px;
+  max-width: 1770px;
   padding: 14px;
   overflow: hidden;
   margin: 12px auto;

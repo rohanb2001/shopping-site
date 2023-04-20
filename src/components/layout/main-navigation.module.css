@@ -1,10 +1,11 @@
-.headers {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 9px;
 }
 
-.headers div {
+.header div {
   width: 300px;
 }
 
@@ -23,25 +24,25 @@
   color: rgb(12, 218, 12);
 }
 
-.headers .icons {
+.header .icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
 }
 
-.headers .icons div {
+.header .icons div {
   display: flex;
   align-items: center;
   letter-spacing: 1.2px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.headers .icons div p {
+.header .icons div p {
   margin-left: 10px;
   border-bottom: 1px solid #bbb8b8;
 }
 
-.headers a {
+.header a {
   color: var(--color-grey-900);
 }

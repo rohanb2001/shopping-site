@@ -10,7 +10,7 @@ import Logo from "./logo";
 function MainNavigation() {
   return (
     <>
-      <header className={classes.headers}>
+      <header className={classes.header}>
         <div>
           <Link href="/">
             <Logo />
