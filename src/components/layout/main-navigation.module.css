@@ -1,0 +1,47 @@
+.headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headers div {
+  width: 300px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.links a {
+  transition: color 0.56s;
+  letter-spacing: 1.1px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.links a:hover {
+  color: rgb(12, 218, 12);
+}
+
+.headers .icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+.headers .icons div {
+  display: flex;
+  align-items: center;
+  letter-spacing: 1.2px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.headers .icons div p {
+  margin-left: 10px;
+  border-bottom: 1px solid #bbb8b8;
+}
+
+.headers a {
+  color: var(--color-grey-900);
+}
