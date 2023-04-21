@@ -8,7 +8,7 @@ function AllPosts(props) {
     <>
       <section className={classes.posts}>
         <h1>{title}</h1>
-        <PostsGrid />
+        <PostsGrid items={props.items} isLoading="false" />
       </section>
     </>
   );

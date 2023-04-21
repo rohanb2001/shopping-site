@@ -2,7 +2,7 @@ import classes from "./post-grid.module.css";
 import PostItem from "./post-item";
 
 function PostsGrid(props) {
-  const { items } = props;
+  const { items, isLoading } = props;
 
   return (
     <>
@@ -11,9 +11,13 @@ function PostsGrid(props) {
           <PostItem key={item.id} item={item} />
         ))}
       </ul>
-      <div className={classes.actions}>
-        <button>Load More</button>
-      </div>
+      {isLoading === "false" ? (
+        ""
+      ) : (
+        <div className={classes.actions}>
+          <button>Load More</button>
+        </div>
+      )}
     </>
   );
 }
