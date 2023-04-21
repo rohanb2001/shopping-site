@@ -1,13 +1,13 @@
 import PostsGrid from "../posts/post-grid";
 import classes from "./featured-post.module.css";
 
-function FeaturedPost() {
+function FeaturedPost(props) {
   return (
     <>
       <div className={classes.heading}>
         <h1>New Arrivals</h1>
       </div>
-      <PostsGrid />
+      <PostsGrid items={props.items} />
     </>
   );
 }

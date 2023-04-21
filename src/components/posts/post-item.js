@@ -2,13 +2,16 @@ import Link from "next/link";
 import classes from "./post-item.module.css";
 import Image from "next/image";
 
-function PostItem() {
+function PostItem(props) {
+  const { name, title, price } = props.item;
+
   const imagePath = `/images/item/shirts-1.jpg`;
+  const linkPath = `/${title}/${name}`;
 
   return (
     <>
       <li className={classes.post}>
-        <Link href="/shirts">
+        <Link href={linkPath}>
           <div className={classes.image}>
             <Image
               src={imagePath}
@@ -20,8 +23,8 @@ function PostItem() {
             />
           </div>
           <div className={classes.content}>
-            <h3>Fair</h3>
-            <p>$879</p>
+            <h3>{name}</h3>
+            <p>{price}</p>
           </div>
         </Link>
       </li>
