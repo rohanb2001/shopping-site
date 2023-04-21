@@ -1,6 +1,6 @@
 import CategoriesContent from "@/components/home-page/categories-content";
 import FeaturedPost from "@/components/home-page/featured-post";
-import { getAllPosts } from "@/lib/item-util";
+import { getLimitedPosts } from "@/lib/item-util";
 
 export default function Home(props) {
   return (
@@ -12,11 +12,11 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const allItems = await getAllPosts();
+  const limitedPosts = await getLimitedPosts(12);
 
   return {
     props: {
-      items: allItems,
+      items: limitedPosts,
     },
   };
 }

@@ -7,7 +7,7 @@ function FeaturedPost(props) {
       <div className={classes.heading}>
         <h1>New Arrivals</h1>
       </div>
-      <PostsGrid items={props.items} />
+      <PostsGrid items={props.items} isLoading="true" />
     </>
   );
 }

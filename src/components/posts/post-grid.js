@@ -1,3 +1,4 @@
+import { getLimitedPosts } from "@/lib/item-util";
 import classes from "./post-grid.module.css";
 import PostItem from "./post-item";
 
