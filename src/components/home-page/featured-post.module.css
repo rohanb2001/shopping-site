@@ -1,0 +1,11 @@
+.heading {
+  text-align: center;
+  border: 2px solid #000;
+  width: 500px;
+  margin: 0 auto 60px auto;
+}
+
+.heading h1 {
+  font-size: 70px;
+  letter-spacing: 3px;
+}

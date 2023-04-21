@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import classes from "./categories-content.module.css";
 import CategoriesImage from "./categories-image";
 
@@ -9,9 +11,15 @@ function CategoriesContent() {
         <p>Labelbyvp offers pan india free delivery</p>
         <div>
           <div className={classes.categories}>
-            <div className={classes.category}>Shirts</div>
-            <div className={classes.category}>T-shirts</div>
-            <div className={classes.category}>Pants</div>
+            <Link className={classes.category} href="/shirts">
+              Shirts
+            </Link>
+            <Link className={classes.category} href="/t-shirts">
+              T-shirts
+            </Link>
+            <Link className={classes.category} href="/pants">
+              Pants
+            </Link>
           </div>
         </div>
       </div>
