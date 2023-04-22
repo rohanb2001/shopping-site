@@ -1,0 +1,15 @@
+.actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.actions button {
+  padding: 14px 60px;
+  color: #663898;
+  border: 1px solid #663898;
+}
+
+.actions button:hover {
+  opacity: 0.8;
+  transition: 0.2s ease-in;
+}

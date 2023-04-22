@@ -1,9 +1,8 @@
-import { getLimitedPosts } from "@/lib/item-util";
 import classes from "./post-grid.module.css";
 import PostItem from "./post-item";
 
 function PostsGrid(props) {
-  const { items, isLoading } = props;
+  const { items } = props;
 
   return (
     <>
@@ -12,13 +11,6 @@ function PostsGrid(props) {
           <PostItem key={item.id} item={item} />
         ))}
       </ul>
-      {isLoading === "false" ? (
-        ""
-      ) : (
-        <div className={classes.actions}>
-          <button>Load More</button>
-        </div>
-      )}
     </>
   );
 }
