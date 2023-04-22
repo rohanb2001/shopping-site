@@ -1,0 +1,21 @@
+/* Sidebar */
+.sidebar {
+  background-color: #000;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  /* right: -100%; */
+  transition: 850ms;
+}
+
+.sidebar.active {
+  right: 0;
+  transition: 350ms;
+}
+
+.top {
+  display: flex;
+}

@@ -1,5 +1,5 @@
 import Footer from "../footer/footer";
-import MainNavigation from "./main-navogation";
+import MainNavigation from "./main-navigation";
 
 function Layout(props) {
   return (

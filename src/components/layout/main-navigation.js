@@ -6,8 +6,17 @@ import { AiOutlineShopping } from "react-icons/ai";
 import classes from "./main-navigation.module.css";
 
 import Logo from "./logo";
+import Sidebar from "../side-bar/sidebar";
+import { useState } from "react";
 
 function MainNavigation() {
+  const [sidebar, setSidebar] = useState(false);
+
+  function showSidebar() {
+    console.log("clicked");
+    setSidebar(!sidebar);
+  }
+
   return (
     <>
       <header className={classes.header}>
@@ -39,10 +48,11 @@ function MainNavigation() {
             </p>
           </div>
           <div>
-            <AiOutlineShopping size="27px" />
+            <AiOutlineShopping size="27px" onClick={showSidebar} />
           </div>
         </div>
       </header>
+      <Sidebar sidebar={sidebar} />
     </>
   );
 }
