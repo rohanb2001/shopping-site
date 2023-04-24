@@ -2,11 +2,7 @@
   display: flex;
   padding: 16px;
   margin-bottom: 5px;
-  /* background-color: red; */
-}
-
-.content:hover {
-  cursor: pointer;
+  background-color: var(--color-grey-50);
 }
 
 .image {

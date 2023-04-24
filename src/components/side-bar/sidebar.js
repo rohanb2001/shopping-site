@@ -28,6 +28,10 @@ function Sidebar(props) {
           </ul>
         </div>
         <div className={classes.viewCart}>
+          <div className={classes.amount}>
+            <h2>Subtotal</h2>
+            <p>$999.00</p>
+          </div>
           <Link href="/cart" onClick={showSidebar}>
             <button>View Cart</button>
           </Link>

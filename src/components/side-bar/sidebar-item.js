@@ -1,3 +1,4 @@
+import Counter from "../counter/counter";
 import classes from "./sidebar-item.module.css";
 
 import Image from "next/image";
@@ -23,6 +24,7 @@ function SidebarItem() {
             <h3>Tartan</h3>
             <p>$999.00</p>
           </div>
+          <Counter />
         </div>
       </li>
       <li>
@@ -41,6 +43,7 @@ function SidebarItem() {
             <h3>Tartan</h3>
             <p>$999.00</p>
           </div>
+          <Counter />
         </div>
       </li>
     </>

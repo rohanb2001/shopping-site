@@ -37,10 +37,20 @@
   cursor: pointer;
 }
 
+.cartContent {
+  height: 70vh;
+  overflow-y: auto;
+}
+
+.cartContent::-webkit-scrollbar {
+  display: none;
+}
+
 .viewCart {
   position: absolute;
   bottom: 30px;
   left: 35px;
+  height: 160px;
 }
 
 .viewCart a button {
@@ -51,9 +61,23 @@
   outline: none;
   font-weight: 500;
   transition: 800ms;
+  margin-top: 2.3rem;
 }
 
 .viewCart a button:hover {
   opacity: 0.9;
   transition: 650ms;
+}
+
+.viewCart .amount h2 {
+  font-size: 30px;
+  letter-spacing: 1.4px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.viewCart .amount p {
+  font-size: 22px;
+  letter-spacing: 1.2px;
+  font-weight: 400;
 }

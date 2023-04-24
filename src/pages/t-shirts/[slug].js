@@ -1,5 +1,11 @@
+import ItemDetails from "@/components/posts/item-detail/item-detail";
+
 function ItemDetailPage() {
-  return <div>ItemDetailPage</div>;
+  return (
+    <>
+      <ItemDetails />
+    </>
+  );
 }
 
 export default ItemDetailPage;
