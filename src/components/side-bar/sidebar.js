@@ -1,41 +1,36 @@
-import "./sidebar.module.css";
-import Image from "next/image";
+import classes from "./sidebar.module.css";
 
 import { AiOutlineRight } from "react-icons/ai";
+import SidebarItem from "./sidebar-item";
+import Link from "next/link";
 
 function Sidebar(props) {
-  const { sidebar } = props;
+  const { sidebar, showSidebar } = props;
 
   return (
     <>
-      <div className={sidebar ? "sidebar active" : "sidebar"}>
-        <div className="top">
-          <div>
-            <AiOutlineRight size="27px" />
+      <div
+        className={
+          sidebar
+            ? `${classes.sidebar} ${classes.active}`
+            : `${classes.sidebar}`
+        }
+      >
+        <div className={classes.top}>
+          <div className={classes.icon}>
+            <AiOutlineRight size="21px" onClick={showSidebar} />
           </div>
-          <div className="heading">Cart</div>
+          <div className={classes.heading}>Cart</div>
         </div>
-        <div className="cartContent">
+        <div className={classes.cartContent}>
           <ul>
-            <li>
-              <div>
-                {/* <div className={classes.image}>
-                  <Image
-                    src={imagePath}
-                    alt="image"
-                    width={300}
-                    height={200}
-                    layout="responsive"
-                    priority
-                  />
-                </div> */}
-                <div>
-                  <h3>Tartan</h3>
-                  <p>$999</p>
-                </div>
-              </div>
-            </li>
+            <SidebarItem />
           </ul>
+        </div>
+        <div className={classes.viewCart}>
+          <Link href="/cart" onClick={showSidebar}>
+            <button>View Cart</button>
+          </Link>
         </div>
       </div>
     </>

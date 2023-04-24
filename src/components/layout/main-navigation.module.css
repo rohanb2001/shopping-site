@@ -26,14 +26,11 @@
 
 .header .icons {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   cursor: pointer;
 }
 
 .header .icons div {
   display: flex;
-  align-items: center;
   letter-spacing: 1.2px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

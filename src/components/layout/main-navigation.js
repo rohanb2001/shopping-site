@@ -52,7 +52,7 @@ function MainNavigation() {
           </div>
         </div>
       </header>
-      <Sidebar sidebar={sidebar} />
+      <Sidebar sidebar={sidebar} showSidebar={showSidebar} />
     </>
   );
 }

@@ -46,6 +46,7 @@ body {
   --size-40: 10rem;
 
   color: #252525;
+  background-color: var(--color-grey-50);
   font-family: "Roboto", sans-serif;
 
   max-width: 1770px;

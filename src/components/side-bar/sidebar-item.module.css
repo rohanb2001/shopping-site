@@ -1,0 +1,39 @@
+.content {
+  display: flex;
+  padding: 16px;
+  margin-bottom: 5px;
+  /* background-color: red; */
+}
+
+.content:hover {
+  cursor: pointer;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.image img {
+  width: 30px;
+  height: 30px;
+}
+
+.description {
+  padding: 10px;
+}
+
+.description h3 {
+  font-weight: 400;
+  color: var(--color-grey-600);
+  letter-spacing: 1.3px;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.description p {
+  font-size: 15px;
+  font-weight: bold;
+}
