@@ -17,6 +17,16 @@ export async function getLimitedPosts(limit) {
     `http://localhost:3000/getAllitems?_limit=${limit}`
   );
 
-  const allItems = await limitedData.json();
-  return allItems;
+  const limitedDataItems = await limitedData.json();
+  return limitedDataItems;
+}
+
+export async function getSingleItem(itemIdentifier) {
+  const allItems = await getAllPosts();
+
+  const itemSlug = allItems.find((item) => {
+    return item.name === itemIdentifier;
+  });
+
+  return itemSlug;
 }

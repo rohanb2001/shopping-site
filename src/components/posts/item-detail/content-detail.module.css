@@ -1,0 +1,66 @@
+.contentDetails {
+  width: 20%;
+}
+
+.contentDetails h1 {
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 1.6px;
+  margin-bottom: 2rem;
+}
+
+.contentDetails p {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 2rem;
+  letter-spacing: 1.3px;
+}
+
+.form label {
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+}
+
+.form select {
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  background-color: inherit;
+  border: 1px solid var(--color-grey-100);
+  cursor: pointer;
+}
+
+.form select option {
+  font-size: 15px;
+  margin-bottom: 2rem;
+  background-color: inherit !important;
+}
+
+.form .counter {
+  margin-bottom: 3rem;
+  margin-left: -0.8rem;
+  color: #000 !important;
+}
+
+.form .actions {
+  width: 100%;
+}
+
+.form button {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem 6rem;
+  letter-spacing: 1.3px;
+  font-family: "Oswald", sans-serif;
+}
+
+.form button:hover {
+  opacity: 0.86;
+}
