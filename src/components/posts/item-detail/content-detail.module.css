@@ -64,3 +64,48 @@
 .form button:hover {
   opacity: 0.86;
 }
+
+@media (max-width: 1412px) {
+  .contentDetails {
+    width: 30%;
+  }
+
+  .form select {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1094px) {
+  .contentDetails {
+    width: 30%;
+  }
+
+  .form select {
+    font-size: 13px;
+    width: 80%;
+    margin-bottom: 1.3rem;
+  }
+
+  .form label {
+    font-size: 13px;
+  }
+
+  .contentDetails p {
+    margin-bottom: 1.2rem;
+  }
+
+  .contentDetails h1 {
+    margin-bottom: 1.3rem;
+  }
+}
+
+@media (max-width: 987px) {
+  .contentDetails {
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .contentDetails {
+    width: 40%;
+  }
+}

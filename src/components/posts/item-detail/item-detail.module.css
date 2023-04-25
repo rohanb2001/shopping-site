@@ -18,3 +18,53 @@
 .image img {
   object-fit: cover;
 }
+
+/* @media (max-width: 1412px) {
+  .contentContainer {
+    max-width: 1200px;
+  }
+} */
+
+@media (min-width: 1414px) {
+  .contentContainer {
+    max-width: 1800px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .contentContainer {
+    max-width: 1800px;
+    height: 400px;
+    margin: 4.1rem 0 1rem 0;
+  }
+}
+
+@media (max-width: 1094px) {
+  .contentContainer {
+    max-width: 1000px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 987px) {
+  .contentContainer {
+    max-width: 1000px;
+    height: 380px;
+  }
+
+  .image {
+    width: 30%;
+    max-height: 50rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .contentContainer {
+    /* width: 1000px; */
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
