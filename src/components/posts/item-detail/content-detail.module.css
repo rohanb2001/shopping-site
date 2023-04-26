@@ -48,11 +48,11 @@
   color: #000 !important;
 }
 
-.form .actions {
+.actions {
   width: 100%;
 }
 
-.form button {
+.actions button {
   background-color: #000;
   color: #fff;
   text-align: center;
@@ -61,8 +61,37 @@
   font-family: "Oswald", sans-serif;
 }
 
-.form button:hover {
+.actions button:hover {
   opacity: 0.86;
+}
+
+.form .counter {
+  width: 100px;
+}
+
+.form .counter div {
+  width: 74px;
+  height: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  border: 1px solid var(--color-grey-100);
+}
+
+.form .counter div button {
+  outline: none;
+  border: none;
+  padding: 5px;
+  font-size: 20px;
+  background-color: inherit;
+  color: #000;
+}
+
+.form .counter div button.disable {
+  pointer-events: none;
+  color: var(--color-grey-100);
 }
 
 @media (max-width: 1412px) {

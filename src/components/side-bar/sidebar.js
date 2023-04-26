@@ -3,9 +3,15 @@ import classes from "./sidebar.module.css";
 import { AiOutlineRight } from "react-icons/ai";
 import SidebarItem from "./sidebar-item";
 import Link from "next/link";
+import { useContext } from "react";
+import { useCartContext } from "@/context/addToCart-content";
 
 function Sidebar(props) {
   const { sidebar, showSidebar } = props;
+
+  const { cart } = useCartContext();
+
+  console.log(cart);
 
   return (
     <>
@@ -30,7 +36,7 @@ function Sidebar(props) {
         <div className={classes.viewCart}>
           <div className={classes.amount}>
             <h2>Subtotal</h2>
-            <p>$999.00</p>
+            <p>00</p>
           </div>
           <Link href="/cart" onClick={showSidebar}>
             <button>View Cart</button>

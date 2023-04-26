@@ -1,10 +1,26 @@
+import { useContext, useState } from "react";
+
 import classes from "./content-detail.module.css";
 
-import Counter from "@/components/counter/counter";
+import AddToCartContext from "@/context/addToCart-content";
 
 function ContentDetails(props) {
+  const { addToCart } = useContext(AddToCartContext);
+
   const { post } = props;
-  const { name, price } = post;
+  const { name, price, id } = post;
+
+  const [count, setCount] = useState(1);
+
+  function handleIncrement(event) {
+    event.preventDefault();
+    setCount((prevCount) => prevCount + 1);
+  }
+
+  function handleDecrement(event) {
+    event.preventDefault();
+    setCount((prevCount) => prevCount - 1);
+  }
 
   return (
     <>
@@ -13,10 +29,7 @@ function ContentDetails(props) {
         <p>{`${price}.00`}</p>
         <form className={classes.form}>
           <label htmlFor="size">Size</label>
-          <select name="size" id="size" defaultValue={"select"}>
-            <option value="select" disabled hidden>
-              Select
-            </option>
+          <select name="size" id="size" required>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
@@ -24,12 +37,24 @@ function ContentDetails(props) {
           </select>
           <label htmlFor="quantity">Quantity</label>
           <div className={classes.counter}>
-            <Counter />
-          </div>
-          <div className={classes.actions}>
-            <button>Add to Cart</button>
+            <div>
+              <button
+                onClick={handleDecrement}
+                className={count < 2 ? `${classes.disable}` : undefined}
+              >
+                -
+              </button>
+              <h5>{count}</h5>
+              <button onClick={handleIncrement}>+</button>
+            </div>
           </div>
         </form>
+        <div
+          className={classes.actions}
+          onClick={() => addToCart(id, name, price, count, post)}
+        >
+          <button>Add to Cart</button>
+        </div>
       </div>
     </>
   );

@@ -24,26 +24,7 @@ function SidebarItem() {
             <h3>Tartan</h3>
             <p>$999.00</p>
           </div>
-          <Counter />
-        </div>
-      </li>
-      <li>
-        <div className={classes.content}>
-          <div className={classes.image}>
-            <Image
-              src={imagePath}
-              alt="image"
-              width={50}
-              height={50}
-              layout="responsive"
-              priority
-            />
-          </div>
-          <div className={classes.description}>
-            <h3>Tartan</h3>
-            <p>$999.00</p>
-          </div>
-          <Counter />
+          <div className={classes.quantity}>Quantity: 1</div>
         </div>
       </li>
     </>
