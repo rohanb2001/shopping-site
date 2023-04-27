@@ -8,6 +8,9 @@ function PostItem(props) {
   const imagePath = `/images/item/shirts-1.jpg`;
   const linkPath = `/${title}/${name}`;
 
+  const number = Number(price);
+  const formattedNumber = number.toLocaleString("en-US");
+
   return (
     <>
       <li className={classes.post}>
@@ -24,7 +27,7 @@ function PostItem(props) {
           </div>
           <div className={classes.content}>
             <h3>{name}</h3>
-            <p>{price}</p>
+            <p>${formattedNumber}</p>
           </div>
         </Link>
       </li>

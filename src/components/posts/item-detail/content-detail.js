@@ -11,6 +11,11 @@ function ContentDetails(props) {
   const { name, price, id } = post;
 
   const [count, setCount] = useState(1);
+  const [size, setSize] = useState("small");
+
+  function handleSelectChange(event) {
+    setSize(event.target.value);
+  }
 
   function handleIncrement(event) {
     event.preventDefault();
@@ -26,10 +31,16 @@ function ContentDetails(props) {
     <>
       <div className={classes.contentDetails}>
         <h1>{name}</h1>
-        <p>{`${price}.00`}</p>
+        <p>${`${price}.00`}</p>
         <form className={classes.form}>
           <label htmlFor="size">Size</label>
-          <select name="size" id="size" required>
+          <select
+            name="size"
+            id="size"
+            required
+            onChange={handleSelectChange}
+            value={size}
+          >
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
@@ -51,7 +62,7 @@ function ContentDetails(props) {
         </form>
         <div
           className={classes.actions}
-          onClick={() => addToCart(id, name, price, count, post)}
+          onClick={() => addToCart(id, name, price, count, size, post)}
         >
           <button>Add to Cart</button>
         </div>

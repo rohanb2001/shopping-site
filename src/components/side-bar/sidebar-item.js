@@ -3,8 +3,11 @@ import classes from "./sidebar-item.module.css";
 
 import Image from "next/image";
 
-function SidebarItem() {
+function SidebarItem({ name, price, count, size }) {
   const imagePath = `/images/item/shirts-1.jpg`;
+
+  const number = Number(price);
+  const formattedNumber = number.toLocaleString("en-US");
 
   return (
     <>
@@ -21,10 +24,11 @@ function SidebarItem() {
             />
           </div>
           <div className={classes.description}>
-            <h3>Tartan</h3>
-            <p>$999.00</p>
+            <h3>{name}</h3>
+            <p>${`${formattedNumber}.00`}</p>
+            <p className={classes.size}>Size: {size}</p>
           </div>
-          <div className={classes.quantity}>Quantity: 1</div>
+          <div className={classes.quantity}>{`Quantity: ${count}`}</div>
         </div>
       </li>
     </>
