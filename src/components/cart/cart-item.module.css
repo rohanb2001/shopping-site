@@ -1,0 +1,46 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .imageContent {
+  display: flex;
+  width: 210px;
+}
+
+.content .imageContent .image {
+  margin-right: 1rem;
+}
+
+.content .imageContent .image img {
+  max-height: 9rem;
+}
+
+.content .imageContent .description h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+}
+
+.content .imageContent .description p {
+  margin-bottom: 10px;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  font-size: 14px;
+}
+
+.content .imageContent .description .count {
+  margin-left: -10px;
+}
+
+.content .subtotalDelete {
+  width: 140px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.content .subtotalDelete h3 {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+}

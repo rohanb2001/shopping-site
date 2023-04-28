@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import classes from "./content-detail.module.css";
 
 import AddToCartContext from "@/context/addToCart-content";
+import Counter from "@/components/counter/counter";
 
 function ContentDetails(props) {
   const { addToCart } = useContext(AddToCartContext);
@@ -48,16 +49,11 @@ function ContentDetails(props) {
           </select>
           <label htmlFor="quantity">Quantity</label>
           <div className={classes.counter}>
-            <div>
-              <button
-                onClick={handleDecrement}
-                className={count < 2 ? `${classes.disable}` : undefined}
-              >
-                -
-              </button>
-              <h5>{count}</h5>
-              <button onClick={handleIncrement}>+</button>
-            </div>
+            <Counter
+              count={count}
+              handleDecrement={handleDecrement}
+              handleIncrement={handleIncrement}
+            />
           </div>
         </form>
         <div

@@ -1,4 +1,3 @@
-import Counter from "../counter/counter";
 import classes from "./sidebar-item.module.css";
 
 import Image from "next/image";
