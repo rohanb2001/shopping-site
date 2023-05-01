@@ -45,7 +45,7 @@ function ContentDetails(props) {
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
-            <option value="extraLarge">Extra Large</option>
+            <option value="extra Large">Extra Large</option>
           </select>
           <label htmlFor="quantity">Quantity</label>
           <div className={classes.counter}>

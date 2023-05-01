@@ -2,6 +2,7 @@
   background-color: #000;
   color: #fff;
   height: 260px;
+  margin-top: 2.2rem;
 }
 
 .statement h1 {
@@ -23,16 +24,23 @@
   margin-bottom: 20px;
 }
 
+.categoriesContainer {
+  width: 100%;
+}
+
 .categories {
+  margin: 0 auto;
+  width: 60%;
   padding: 24px;
   display: flex;
   justify-content: space-evenly;
 }
 
 .category {
-  padding: 14px 70px;
+  padding: 10px 90px;
   border: 3px solid #fff;
   color: #fff;
+  font-size: 14px;
   letter-spacing: 1.2px;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -41,4 +49,43 @@
 .category:hover {
   background-color: #fff;
   color: #000;
+}
+
+@media (max-width: 1370px) {
+  .categories {
+    margin: 0 auto;
+    width: 80%;
+    padding: 24px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .category {
+    padding: 8px 80px;
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+}
+@media (max-width: 1011px) {
+  .categories {
+    margin: 0 auto;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .category {
+    padding: 8px 80px;
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
 }

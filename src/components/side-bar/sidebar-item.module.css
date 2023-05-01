@@ -7,8 +7,9 @@
 
 .image {
   width: 80px;
-  height: 80px;
+  height: 120px;
   overflow: hidden;
+  margin-right: 5px;
 }
 
 .image img {
@@ -17,20 +18,21 @@
 }
 
 .description {
-  padding: 10px;
+  padding: 5px;
+  width: 130px;
 }
 
 .description h3 {
-  font-weight: 400;
+  font-weight: bold;
   color: var(--color-grey-600);
   letter-spacing: 1.3px;
-  font-size: 16px;
-  margin-bottom: 5px;
+  font-size: 15px;
+  margin-bottom: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .description p {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -44,9 +46,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
-  margin-left: 19px;
-  letter-spacing: 1.3px;
-  font-weight: bold;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
 }

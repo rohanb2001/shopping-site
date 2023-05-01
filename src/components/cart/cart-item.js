@@ -6,13 +6,15 @@ import { AiFillDelete } from "react-icons/ai";
 import { useCartContext } from "@/context/addToCart-content";
 
 function CartItem({ name, price, count, size, id }) {
-  const { cart, setDecrement, setIncrement } = useCartContext();
+  const { setDecrement, setIncrement, removeItem } = useCartContext();
 
   const imagePath = `/images/item/shirts-1.jpg`;
 
   const number = Number(price);
   const formattedNumber = number.toLocaleString("en-US");
   const subTotal = count * number;
+
+  const formattedSize = size.charAt(0).toUpperCase() + size.slice(1);
 
   return (
     <>
@@ -32,7 +34,7 @@ function CartItem({ name, price, count, size, id }) {
             <div className={classes.description}>
               <h3>{name}</h3>
               <p>${`${formattedNumber}.00`}</p>
-              <p className={classes.size}>{`Size: ${size}`}</p>
+              <p className={classes.size}>{`Size: ${formattedSize}`}</p>
               <div className={classes.count}>
                 <Counter
                   count={count}
@@ -44,7 +46,12 @@ function CartItem({ name, price, count, size, id }) {
           </div>
           <div className={classes.subtotalDelete}>
             <h3>${`${subTotal}.00`}</h3>
-            <AiFillDelete size="20px" />
+            <AiFillDelete
+              size="20px"
+              onClick={() => removeItem(id)}
+              cursor={"pointer"}
+              color="#c22121"
+            />
           </div>
         </div>
       </li>

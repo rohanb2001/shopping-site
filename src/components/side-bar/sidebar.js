@@ -30,11 +30,15 @@ function Sidebar(props) {
           <div className={classes.heading}>Cart</div>
         </div>
         <div className={classes.cartContent}>
-          <ul>
-            {cart.map((item) => {
-              return <SidebarItem key={item.id} {...item} />;
-            })}
-          </ul>
+          {cart.length ? (
+            <ul>
+              {cart.map((item) => {
+                return <SidebarItem key={item.id} {...item} />;
+              })}
+            </ul>
+          ) : (
+            <p className={classes.noItems}>No items yet!</p>
+          )}
         </div>
         <div className={classes.viewCart}>
           <div className={classes.amount}>

@@ -82,6 +82,18 @@ const cartReducer = (state, action) => {
     };
   }
 
+  // Remove Item from Cart
+  if (action.type === "REMOVE_ITEM") {
+    let updatedCart = state.cart.filter(
+      (currElem) => currElem.id !== action.payload
+    );
+
+    return {
+      ...state,
+      cart: updatedCart,
+    };
+  }
+
   return state;
 };
 

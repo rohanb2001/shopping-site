@@ -9,7 +9,7 @@ function CategoriesContent() {
       <div className={classes.statement}>
         <h1>statement of lifestyle</h1>
         <p>Labelbyvp offers pan india free delivery</p>
-        <div>
+        <div className={classes.categoriesContainer}>
           <div className={classes.categories}>
             <Link className={classes.category} href="/shirts">
               Shirts

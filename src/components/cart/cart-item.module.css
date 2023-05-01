@@ -5,15 +5,21 @@
 
 .content .imageContent {
   display: flex;
-  width: 210px;
+  width: 250px;
+  /* height: 300px; */
 }
 
 .content .imageContent .image {
   margin-right: 1rem;
+  flex: 1.5;
 }
 
 .content .imageContent .image img {
   max-height: 9rem;
+}
+
+.content .imageContent .description {
+  flex: 2.2;
 }
 
 .content .imageContent .description h3 {
@@ -26,9 +32,8 @@
   margin-bottom: 10px;
   font-weight: 400;
   letter-spacing: 1.1px;
-  font-size: 14px;
+  font-size: 13px;
 }
-
 .content .imageContent .description .count {
   margin-left: -10px;
 }

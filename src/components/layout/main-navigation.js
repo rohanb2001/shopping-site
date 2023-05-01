@@ -56,6 +56,7 @@ function MainNavigation() {
         className={sidebar ? `${classes.overlay}` : ""}
         onClick={showSidebar}
       ></div>
+
       <Sidebar sidebar={sidebar} showSidebar={showSidebar} />
     </>
   );
