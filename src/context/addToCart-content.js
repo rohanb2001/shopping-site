@@ -19,8 +19,25 @@ export function AddToCartContextProvider(props) {
     });
   }
 
+  // Increment and Decrement the product
+  function setDecrement(id) {
+    dispatch({
+      type: "SET_DECREMENT",
+      payload: id,
+    });
+  }
+
+  function setIncrement(id) {
+    dispatch({
+      type: "SET_INECREMENT",
+      payload: id,
+    });
+  }
+
   return (
-    <AddToCartContext.Provider value={{ ...state, addToCart }}>
+    <AddToCartContext.Provider
+      value={{ ...state, addToCart, setDecrement, setIncrement }}
+    >
       {props.children}
     </AddToCartContext.Provider>
   );
